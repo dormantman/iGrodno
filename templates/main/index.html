@@ -1,0 +1,46 @@
+{% load static %}
+{% load compress %}
+
+
+<!doctype html>
+<html lang="ru">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="keywords"
+              content="iGrodno, игродно, компьютерные игры, патчи, моды, прохождение игр, коды, читы, трейнеры"/>
+        <meta name="description" content=""/>
+
+        <meta name="theme-color" content="#20232a">
+
+        <link rel="apple-touch-icon" href="{% static 'favicon.png' %}?{{ RID }}">
+        <link rel="icon" href="{% static 'favicon.png' %}?{{ RID }}">
+        <link rel="shortcut icon" href="{% static 'favicon.png' %}?{{ RID }}">
+
+        {% compress css %}
+            <link rel="stylesheet" href="{% static '/style/main.css' %}"/>
+            <link rel="stylesheet" href="{% static '/style/games.css' %}"/>
+        {% endcompress %}
+
+        <title>{{ pageTitle }}</title>
+
+    {% endblock head %}
+</head>
+<body>
+<div id="app"></div>
+</body>
+{#{% compress js %}#}
+    <script type="text/javascript">
+        let data = {{ additional | safe }};
+    </script>
+{#{% endcompress %}#}
+{% compress js %}
+    <script src="{% static "frontend/main.js" %}"></script>
+{% endcompress %}
+</html>
+

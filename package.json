@@ -1,0 +1,41 @@
+{
+  "name": "iGrodno",
+  "version": "1.0.0",
+  "description": "iGrodno - Игровой портал",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./web/src/index.js --output ./static/frontend/main.js",
+    "build": "webpack --mode production ./web/src/index.js --output ./static/frontend/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DormantMan/iGrodno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DormantMan/iGrodno/issues"
+  },
+  "homepage": "https://github.com/DormantMan/iGrodno#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-alice-carousel": "^1.15.2",
+    "react-dom": "^16.8.6",
+    "weak-key": "^1.0.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "fast-average-color": "^5.2.0",
+    "get-average-color": "0.0.6",
+    "query-string": "^6.8.2",
+    "react-html-parser": "^2.0.2"
+  }
+}

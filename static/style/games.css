@@ -1,0 +1,831 @@
+* {
+    --main-color: #ff5349;
+    --mid-main-color: #f85c50;
+    --low-main-color: #ff756b;
+    --white-color: #ffffff;
+    --menu-color: #20232a;
+    --bg-color: #282c34;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+    background-color: transparent
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
+header {
+    display: block;
+}
+
+div {
+    display: block;
+}
+
+.body-container {
+    width: 100%;
+    background-color: var(--bg-color);
+    color: var(--white-color);
+}
+
+
+.body-container > .entry {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (min-width: 780px) {
+    .body-container > .entry {
+        width: 90%;
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 1340px) {
+    .body-container > .entry {
+        max-width: 1260px;
+    }
+}
+
+
+.body-container > .entry > .top {
+    padding: 40px 40px 0;
+}
+
+
+.body-container > .entry > .top > .title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 0.01em;
+
+    color: var(--main-color);
+    margin: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .top > .title {
+        font-size: 28px;
+        max-width: 12em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .body-container > .entry > .top > .title {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        font-size: 40px;
+    }
+}
+
+
+.body-container > .entry > .footer-buttons {
+    padding: 20px 0 0 0;
+}
+
+.body-container > .entry > .footer-buttons > .next-button {
+    text-align: center;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .footer-buttons > .next-button {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .body-container > .entry > .footer-buttons > .next-button {
+        padding-left: 40px;
+    }
+}
+
+.body-container > .entry > .footer-buttons > .next-button > .button {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #939598;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    padding: 10px 25px;
+    transition: background-color 0.2s ease-out 0s;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+/*@media (min-width: 1280px) {*/
+/*    .body-container > .entry > .footer-buttons > .next-button > .button {*/
+/*        font-size: 20px;*/
+/*        padding-top: 15px;*/
+/*        padding-bottom: 15px;*/
+/*    }*/
+/*}*/
+
+
+.body-container > .entry > .footer-buttons > .next-button > .button:hover {
+    background-color: var(--white-color);
+}
+
+.body-container > .entry > .game-container:first-child {
+    margin-top: 0;
+}
+
+.body-container > .entry > .game-container {
+    width: 100%;
+    margin-top: 60px;
+}
+
+@media (min-width: 900px) {
+    .body-container > .entry > .game-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+    }
+}
+
+@media (max-width: 799px) {
+    .body-container > .entry > .game-container {
+        display: block;
+    }
+}
+
+.body-container > .entry > .game-container > .description-container {
+    flex: 0 0 35%;
+    -webkit-flex: 0 0 35%;
+}
+
+.body-container > .entry > .game-container > .description-container h3 {
+    padding-top: 0;
+}
+
+.body-container > .entry > .game-container > .description-container p {
+    margin-top: 15px;
+    margin-right: 40px;
+    line-height: 1.7;
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+    .body-container > .entry > .game-container > .description-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .game-container > .description-container {
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .body-container > .entry > .game-container > .description-container p {
+        margin-top: 25px;
+    }
+}
+
+.body-container > .entry > .game-container > .description-container > a > .title {
+    color: var(--white-color);
+    font-size: 25px;
+    line-height: 1.3;
+    transition: all ease 0.3s;
+}
+
+.body-container > .entry > .game-container > .description-container > a > .title:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game-container > .description-container > a > .title {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .body-container > .entry > .game-container > .description-container > .description {
+        display: none;
+    }
+}
+
+.body-container > .entry > .game-container > .game {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+
+.body-container > .entry > .game-container > .game > .card {
+    height: 320px;
+    background-color: var(--menu-color);
+    border-radius: 15px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .game-container > .game > .card {
+        height: 250px;
+    }
+}
+
+@media (min-width: 900px) {
+    .body-container > .entry > .game-container > .game > .card {
+        margin: 20px 40px 20px 40px;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry {
+    display: flex;
+    position: relative;
+    padding: 10px;
+    height: 100%;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .date {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .date {
+        bottom: 8px;
+        right: 10px;
+    }
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .logo {
+    height: 100%;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .image {
+    height: 100%;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .no-image {
+    width: 275px;
+    color: var(--white-color);
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .no-image:hover {
+    color: var(--main-color);
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .no-image {
+        width: 217px;
+    }
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .no-image {
+        width: 141px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .image {
+        height: 85%;
+    }
+}
+
+@media (min-width: 600px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .logo > a > .image:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+    }
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .genres {
+    display: flex;
+    flex-flow: column;
+    padding: 15px 0 0 15px;
+    font-size: 15px;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .genres > .genre {
+    color: var(--white-color);
+    padding-bottom: 5px;
+    transition: all ease 0.3s;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .genres > .genre:hover {
+    color: #FBE7B5;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .genres {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .genres {
+        font-size: 16px;
+    }
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms {
+    position: absolute;
+    bottom: 16px;
+    left: 235px;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 10px;
+}
+
+@media (min-width: 1250px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .platforms {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 900px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .platforms {
+        left: 290px;
+    }
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .platforms {
+        left: 10px;
+        bottom: 14px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1250px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .platforms {
+        width: calc(100% / 4);
+        font-size: 12px;
+    }
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms a {
+    padding: 2px 3px;
+    margin-left: 5px;
+
+    border: 1px solid;
+    margin-top: 5px;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .pc {
+    color: #940CFE;
+    border-color: #940CFE;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .pc:hover {
+    background-color: #940CFE;
+    color: black;
+}
+
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .ps3 {
+    color: #7EB3FF;
+    border-color: #7EB3FF;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .ps3:hover {
+    background-color: #7EB3FF;
+    color: black;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .ps4 {
+    color: #64C7FF;
+    border-color: #64C7FF;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .ps4:hover {
+    background-color: #64C7FF;
+    color: black;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .xbox360 {
+    color: #5BFF62;
+    border-color: #5BFF62;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .xbox360:hover {
+    background-color: #5BFF62;
+    color: black;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .xboxone {
+    color: #00DC7D;
+    border-color: #00DC7D;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .platforms > .xboxone:hover {
+    background-color: #00DC7D;
+    color: black;
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .score {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 30%;
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .game-container > .game > .card > .entry > .score {
+        top: 8px;
+        right: 10px;
+    }
+}
+
+.body-container > .entry > .game-container > .game > .card > .entry > .score > .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.body-container > .entry > .game > .top {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: space-around;
+    margin: 0 50px 40px 50px;
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game > .top {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .body-container > .entry > .game > .top {
+        margin: 0;
+    }
+}
+
+
+.body-container > .entry > .game > .top > .logo {
+    display: block;
+    order: -1;
+}
+
+
+.body-container > .entry > .game > .top > .logo > .image {
+    height: 360px;
+    margin: 40px 40px 0 0;
+    border-radius: 20px;
+}
+
+@media (min-width: 601px) and (max-width: 750px) {
+    .body-container > .entry > .game > .top > .logo > .image {
+        height: 240px;
+        border-radius: 20px;
+        padding: 0;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game > .top > .logo > .image {
+        height: 340px;
+        border-radius: 20px;
+        padding: 0;
+        margin: 40px 0 0 0;
+    }
+}
+
+.body-container > .entry > .game > .top > .logo > .no-image {
+    width: 275px;
+    color: var(--white-color);
+}
+
+.body-container > .entry > .game > .top > .logo > .no-image:hover {
+    color: var(--main-color);
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .body-container > .entry > .game > .top > .logo > .no-image {
+        width: 217px;
+    }
+}
+
+@media (max-width: 599px) {
+    .body-container > .entry > .game > .top > .logo > .no-image {
+        width: 141px;
+    }
+}
+
+
+.body-container > .entry > .game > .top > .description {
+    order: 1;
+    width: 90%;
+}
+
+@media (min-width: 1100px) {
+    .body-container > .entry > .game > .top > .description {
+        width: calc(100% / 2.5);
+    }
+}
+
+.body-container > .entry > .game > .top > .info {
+    display: block;
+    order: -1;
+    width: 100%;
+}
+
+@media (min-width: 601px) and (max-width: 750px) {
+    .body-container > .entry > .game > .top > .info {
+        margin: 0 20px 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game > .top > .info {
+        margin: 20px 20px 0 20px;
+    }
+}
+
+.body-container > .entry > .game > .top > .info > .container {
+    height: 360px;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+
+    background-color: var(--bg-color);
+    opacity: 0.95;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 750px) {
+    .body-container > .entry > .game > .top > .info > .container {
+        margin-top: 0;
+    }
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left {
+    width: 50%;
+}
+
+
+@media (max-width: 750px) {
+    .body-container > .entry > .game > .top > .info > .container > .left {
+        height: 240px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .body-container > .entry > .game > .top > .info > .container > .left {
+        order: 0;
+    }
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    width: fit-content;
+}
+
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms a {
+    padding: 2px 3px;
+    margin-left: 5px;
+
+    border: 1px solid;
+    margin-top: 5px;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .pc {
+    color: #940CFE;
+    border-color: #940CFE;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .pc:hover {
+    background-color: #940CFE;
+    color: black;
+}
+
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .ps3 {
+    color: #7EB3FF;
+    border-color: #7EB3FF;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .ps3:hover {
+    background-color: #7EB3FF;
+    color: black;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .ps4 {
+    color: #64C7FF;
+    border-color: #64C7FF;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .ps4:hover {
+    background-color: #64C7FF;
+    color: black;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .xbox360 {
+    color: #5BFF62;
+    border-color: #5BFF62;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .xbox360:hover {
+    background-color: #5BFF62;
+    color: black;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .xboxone {
+    color: #00DC7D;
+    border-color: #00DC7D;
+    transition: all 0.05s ease-in-out;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .platforms > .xboxone:hover {
+    background-color: #00DC7D;
+    color: black;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .genres {
+    display: flex;
+    flex-flow: column;
+    padding: 15px 0 15px 0;
+    font-size: 15px;
+    width: fit-content;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .genres > .genre {
+    color: var(--white-color);
+    padding-bottom: 5px;
+    transition: all ease 0.3s;
+    width: fit-content;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .genres > .genre:hover {
+    color: #FBE7B5;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .body-container > .entry > .game > .top > .info > .container > .left > .genres {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .body-container > .entry > .game > .top > .info > .container > .left > .genres {
+        font-size: 16px;
+    }
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .genres > .label {
+    font-size: 13px;
+    color: #939598;
+    padding-bottom: 6px;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .date {
+    width: fit-content;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .date > .label {
+    font-size: 13px;
+    color: #939598;
+    padding-bottom: 6px;
+}
+
+.body-container > .entry > .game > .top > .info > .container > .left > .date > .value {
+
+}
+
+.body-container > .entry > .game > .top > .info > .container > .right {
+    width: 50%;
+}
+
+@media (min-width: 1280px) {
+    .body-container > .entry > .game > .top > .info > .container > .right > .description p {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .body-container > .entry > .game > .top > .info > .container > .right > .description p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .body-container > .entry > .game > .top > .info > .container > .right {
+        display: none;
+    }
+
+    .body-container > .entry > .game > .top > .info > .container > .left {
+        width: 100%;
+    }
+}
+
+.body-container > .entry > .description {
+    margin: 20px 100px;
+    padding: 20px 20px 1px 20px;
+    background-color: var(--bg-color);
+    opacity: 0.95;
+    border-radius: 20px;
+}
+
+@media (min-width: 1200px) {
+    .body-container > .entry > .description {
+        margin: 0 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .body-container > .entry > .description {
+        margin: 20px 20px;
+    }
+}
+
+.body-container > .entry > .description p {
+    margin-bottom: 25px;
+}
+
+@media (min-width: 600px) {
+    .body-container > .entry > .description {
+        padding: 25px 25px 5px 25px;
+    }
+}
+
+.body-container > .entry > .screenshots {
+    padding-top: 20px;
+}
