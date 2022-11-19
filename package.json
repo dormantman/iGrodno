@@ -30,7 +30,7 @@
     "react-dom": "^16.8.6",
     "weak-key": "^1.0.1",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "fast-average-color": "^5.2.0",
